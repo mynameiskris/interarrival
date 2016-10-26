@@ -1,0 +1,64 @@
+---
+title: "151AHW4"
+author: "xuncheng Zhang"
+date: "October 19, 2016"
+output: html_document
+---
+#Q1
+```{r}
+n = 100
+x = rnorm(n)
+#sigma hat
+t1 = sd(x)
+
+M = 1000
+t.s = rep(NA,M)
+for(i in 1:N){
+  x.s = rnorm(n)
+  t.s[i] = sd(x.s)
+}
+hist(t.s - t1)
+#It looks like normal
+sd = sd(t.s-t1)
+
+#The 95%CI 
+mean(t.s) - 1.96*sd
+mean(t.s) + 1.96*sd
+
+#Yes 1 is in the interval
+
+
+```
+
+#Q2
+```{r}
+setwd("Desktop")
+load("twoyear.RData")
+ls()
+
+ty = data
+ty.desc = desc
+ty.desc
+head(ty)
+
+M = lm(lwage ~ jc + univ + exper, data = ty)
+summary(M)
+
+
+
+
+```
+
+#Q3
+```{r}
+library("faraway")
+load("savings")
+ls()
+```
+
+#Q4
+```{r}
+
+
+```
+
