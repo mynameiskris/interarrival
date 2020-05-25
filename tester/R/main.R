@@ -12,6 +12,7 @@
 #' @export
 #'
 #' @examples main(seed=723,t=12,lambda=2,p=1)
+#' main(seed=111,t=12,lambda=1,p=1)
 
 main <- function(seed=723, t=24, lambda = 2, p = 1/3) {
   set.seed(seed)
